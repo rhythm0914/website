@@ -1,0 +1,635 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Body */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+    color: #ddd;
+    animation: fadeIn 1.2s ease-in-out;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar:hover {
+    background-color: #444;
+}
+
+.navbar .logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Scroll animation */
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animate {
+    animation: fadeInSection 1s ease-out forwards;
+    opacity: 0; /* Hide elements before scroll */
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #444, #2e2e2e);
+    color: white;
+    text-align: center;
+    padding: 40px 15px; /* Reduced padding further */
+    margin-top: 60px; /* Adjusted for fixed navbar */
+    border-bottom: 4px solid #ff6f61; /* Slightly thinner border */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Smaller font size */
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.1rem; /* Smaller font size */
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* CTA Button */
+.cta-button {
+    text-decoration: none;
+    margin-top: 10px; /* Adds space above the button */
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #e75c53;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Feedback Form */
+.contact-form {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #2e2e2e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.form-container:hover {
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #333;
+    color: #ddd;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff6f61;
+    background-color: #444;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 5px solid #ff6f61;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+.radio-list {
+    display: flex; /* Align items in a row */
+    gap: 15px; /* Add spacing between items */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0; /* Add vertical spacing around the list */
+}
+
+.radio-item label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.radio-item label:hover {
+    color: #ff6f61; /* Change label color on hover */
+}
+
+.radio-item input[type="radio"] {
+    display: none; /* Hide the default radio button */
+}
+
+.radio-item input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.radio-item input[type="radio"]:checked + label::before {
+    background-color: #ff6f61; /* Checked radio color */
+    border-color: #ff6f61; /* Match border with the background */
+}
+/* Features Section */
+.feature-table {
+    width: 100%;
+    table-layout: fixed; /* Equal column width */
+    margin: 40px auto;
+    text-align: center;
+}
+
+.feature-table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+/* Style for the feature-box text */
+.feature-box p {
+    margin-bottom: 15px; /* Adds space between the paragraph and the button */
+}
+.feature-box img {
+    width: 100%;
+    height: auto;
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    color: #f76c6c;
+}
+.profile-image {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes it round */
+    overflow: hidden; /* Ensures image fits within the circle */
+    border: 4px solid #333; /* Optional border for a professional look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    margin: 0 auto; /* Centers the image */
+    display: flex; /* Centers the image inside */
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 100%; /* Ensures the image scales to fit */
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+.content {
+    max-width: 800px; /* Restricts the content width for better readability */
+    margin: 20px auto; /* Centers the content and adds spacing */
+    padding: 20px; /* Adds internal spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    color: #333; /* Professional dark text color */
+    line-height: 1.6; /* Improves text readability */
+    text-align: center; /* Center-aligns the content */
+}
+
+.content h2 {
+    font-size: 2rem; /* Slightly larger font for the heading */
+    margin-bottom: 15px; /* Adds space below the heading */
+    color: #222; /* Slightly darker color for contrast */
+    font-weight: bold; /* Makes the heading stand out */
+}
+
+.content p {
+    margin: 10px 0; /* Adds spacing between paragraphs */
+}
+
+.social-icons {
+    margin-top: 20px; /* Space above social media icons */
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spacing between icons */
+}
+
+.social-icons .icon {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #555; /* Neutral color for icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icons .icon:hover {
+    color: #0077b5; /* Change to a vibrant color on hover (example: LinkedIn blue) */
+}
+.skills-content, .training-content {
+    max-width: 800px; /* Restricts content width for better readability */
+    margin: 20px auto; /* Centers the section and adds spacing */
+    padding: 20px; /* Adds internal spacing */
+    background-color: #f4f4f4; /* Neutral background for contrast */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    color: #444; /* Professional text color */
+    line-height: 1.6; /* Improves text readability */
+    text-align: center; /* Centers the content */
+}
+
+.skills-content h2, .training-content h2 {
+    font-size: 2rem; /* Larger font for section headings */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #222; /* Slightly darker color for contrast */
+    font-weight: bold; /* Highlights the heading */
+}
+
+.skills-content ul, .training-content ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+.skills-content li, .training-content li {
+    background: #fff; /* White background for items */
+    margin: 10px 0; /* Space between items */
+    padding: 10px 15px; /* Internal spacing */
+    border-radius: 5px; /* Rounded edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 1rem; /* Standard font size for list items */
+    text-align: left; /* Aligns list text to the left */
+}
+
+.skills-content li i, .training-content li i {
+    color: #0077b5; /* Icon color, change as needed */
+    margin-right: 10px; /* Adds space between icon and text */
+}
+
+.skills-content li:hover, .training-content li:hover {
+    background-color: #0077b5; /* Changes background on hover */
+    color: #fff; /* White text on hover */
+    cursor: pointer; /* Adds pointer cursor */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+/* Projects Container */
+.projects-container {
+    display: flex; /* Enables flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    gap: 20px; /* Adds spacing between items */
+    justify-content: center; /* Centers the items horizontally */
+    margin: 40px auto; /* Adds vertical spacing around the container */
+    padding: 20px; /* Adds internal spacing */
+    max-width: 1200px; /* Limits the maximum width of the container */
+    animation: fadeIn 1s ease-out; /* Animation to fade in the entire container */
+}
+
+/* Individual Project Item */
+.project-item {
+    background-color: #2e2e2e; /* Dark background for each project */
+    border-radius: 12px; /* Rounded corners for each item */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adds shadow to create depth */
+    width: calc(33.333% - 20px); /* Makes each item take up one-third of the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Smooth transition effects */
+    padding: 20px;
+    text-align: center; /* Centers the text */
+    opacity: 0; /* Initially hide the item */
+    animation: slideIn 0.6s forwards; /* Animation to slide in project items */
+}
+
+/* Hover Effects for Project Item */
+.project-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the project item on hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); /* Darkens shadow on hover */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-In Animation for Project Items */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Project Item Image */
+.project-item img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Adds rounded corners to images */
+    margin-bottom: 20px; /* Adds spacing below the image */
+}
+
+/* Project Title */
+.project-item h3 {
+    font-size: 1.5rem; /* Sets a readable font size */
+    color: #f76c6c; /* Accent color for titles */
+    margin-bottom: 15px; /* Adds space below the heading */
+}
+
+/* Project Description */
+.project-item p {
+    font-size: 1rem; /* Sets a standard font size for description */
+    color: #ddd; /* Light text color for better contrast */
+    margin-bottom: 20px; /* Adds space below the description */
+}
+
+/* Font Awesome Icons inside the Project Item */
+.project-item .fa {
+    color: #ff6f61; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 10px; /* Spacing between icons */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for icons */
+.project-item .fa:hover {
+    color: #e75c53; /* Icon color on hover */
+}
+
+/* Project Item Link (Button) */
+.project-item a {
+    display: inline-block;
+    background-color: #ff6f61; /* CTA button background color */
+    color: white; /* Button text color */
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.project-item a:hover {
+    background-color: #e75c53; /* Button hover color */
+    transform: translateY(-3px); /* Slightly lifts the button */
+}
+/* Navigation Icons */
+.nav-icons {
+    display: flex; /* Display icons in a row */
+    gap: 15px; /* Space between icons */
+    align-items: center; /* Align icons vertically in the center */
+}
+
+.nav-icons .icon {
+    font-size: 1.5rem; /* Icon size */
+    color: #fff; /* Default color for icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transitions */
+    cursor: pointer; /* Cursor to indicate clickable elements */
+}
+
+.nav-icons .icon:hover {
+    color: #ff6f61; /* Change icon color on hover */
+    transform: scale(1.1); /* Slight scale up effect */
+}
+/* Gallery grid layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Reduced gap for closer spacing */
+    padding: 10px;
+}
+
+/* Gallery item style */
+.gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for gallery items */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery item image */
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Gallery item caption */
+.gallery-item p {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 10px; /* Reduced gap for closer spacing */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 8px; /* Even closer gap on mobile */
+    }
+}
+
+/* Style for making images round */
+.icon-round {
+    display: inline-block;
+    width: 120px; /* Adjust the size of the round container */
+    height: 120px; /* Adjust the size of the round container */
+    border-radius: 50%; /* Makes the container round */
+    overflow: hidden; /* Ensures that images stay within the round container */
+    margin-bottom: 10px; /* Space between image and text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a nice effect */
+}
+
+.icon-round img {
+    width: 100%; /* Makes the image fill the round container */
+    height: 100%; /* Makes the image fill the round container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+/* General gallery styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+    gap: 10px; /* Space between images */
+    padding: 20px;
+}
+
+/* Gallery items */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits in the box without distortion */
+    border-radius: 5px; /* Optional: slightly rounded corners for aesthetic */
+}
+
+.gallery-item p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Optional: Hover effect on gallery items */
+.gallery-item:hover img {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Hero Icon */
+.hero-icon {
+    font-size: 4rem; /* Large icon size */
+    margin-bottom: 20px;
+    color: #ff6f61; /* Accent color for the icon */
+}
+/* Round Logo */
+.logo img {
+    width: 50px; /* Adjust the size of the logo */
+    height: 50px; /* Keeps the height the same to make it circular */
+    border-radius: 50%; /* Makes the logo round */
+    object-fit: cover; /* Ensures the image covers the circular area */
+    border: 2px solid #ff6f61; /* Optional border for emphasis */
+}

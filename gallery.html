@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Web Dynamics' curated photo gallery showcasing projects and achievements.">
+    <title>Photo Gallery - Code Plus +</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="image1.jpg" alt="Web Dynamics Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="personalinfo.html"><i class="fas fa-user"></i> Personal Info</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="skills.html"><i class="fas fa-tools"></i> Skills and Training</a></li>
+            <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+            <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> Photo Gallery</a></li>
+            <li><a href="feedback.html"><i class="fas fa-comments"></i> Feedback</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="#" class="icon"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+            <a href="#" class="icon"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+   <!-- Hero Section -->
+<header class="hero">
+    <div class="hero-icon">
+        <i class="fas fa-image"></i> <!-- Icon for photo gallery (image) -->
+    </div>
+    <h1>Photo <span>Gallery</span></h1>
+    <p>Explore our curated collection of images showcasing our work and achievements.</p>
+</header>
+
+
+    <!-- Gallery Section -->
+    <section class="features">
+        <div class="section-description">
+            <p>Discover a visual journey through our projects, events, and milestones. Each image tells a story of creativity and collaboration.</p>
+        </div>
+        
+        <section class="gallery">
+            <div class="section-description">
+                <p>Explore the gallery below to see highlights from our projects and events.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Web Design Project" />
+                    <p>Web design project for a leading tech company.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Branding Campaign" />
+                    <p>Branding campaign for an international client.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Teamwork" />
+                    <p>Teamwork during a marketing strategy session.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Product Launch" />
+                    <p>Photo shoot for a successful product launch.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Social Media Campaign" />
+                    <p>Creating buzz with a social media campaign.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Workspace" />
+                    <p>Our workspace where ideas come to life.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Brainstorming" />
+                    <p>Collaborative brainstorming for innovative solutions.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Photography" />
+                    <p>Capturing moments of inspiration and dedication.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Ryan Cañano. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

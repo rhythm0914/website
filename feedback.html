@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We value your feedback to improve our services and offerings.">
+    <title>Feedback - Code Plus +</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar Section -->
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="img/image1.jpg" alt="Web Dynamics Logo">
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html" ><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="personalinfo.html"><i class="fas fa-user"></i> Personal Info</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="skills.html"><i class="fas fa-tools"></i> Skills and Training</a></li>
+        <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="gallery.html"><i class="fas fa-images"></i> Photo Gallery</a></li>
+        <li><a href="feedback.html" class="active"><i class="fas fa-comments"></i> Feedback</a></li>
+    </ul>
+    <div class="nav-icons">
+        <a href="#" class="icon"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+        <a href="#" class="icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+</nav>
+
+<!-- Hero Section for Feedback -->
+<header class="hero">
+    <div class="hero-icon">
+        <i class="fas fa-comments"></i> <!-- Icon for feedback (speech bubbles) -->
+    </div>
+    <h1>Feedback</h1>
+    <p>Your opinions matter to us! Let us know how we can improve:</p>
+</header>
+
+
+    <!-- Feedback Form Section -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>Share Your Feedback</h2>
+			<!-- Feedback Type -->
+                <div class="form-group">
+                    <p>Type of Feedback:</p>
+
+					<div class="radio-list">
+    <div class="radio-item">
+        <input type="radio" id="option1" name="options" value="1">
+        <label for="option1">Comment</label>
+    </div>
+    <div class="radio-item">
+        <input type="radio" id="option2" name="options" value="2">
+        <label for="option2">Suggestion</label>
+    </div>
+    <div class="radio-item">
+        <input type="radio" id="option3" name="options" value="3">
+        <label for="option3">Question</label>
+    </div>
+</div>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+
+                
+
+                </div>
+
+                <!-- Feedback Description -->
+                <div class="form-group">
+                    <label for="description">Describe Your Feedback:</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Provide details about your feedback" required></textarea>
+                </div>
+
+                <!-- Attach Image -->
+                <div class="form-group">
+                    <label for="image">Attach Image (Optional):</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+
+                <!-- Signature -->
+                <div class="form-group">
+                    <label for="signature">Signature (Optional):</label>
+                    <input type="file" id="signature" name="signature" accept="image/*">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="cta-button">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Ryan Cañano. All rights reserved.</p>
+    </footer>
+</body>
+</html>
